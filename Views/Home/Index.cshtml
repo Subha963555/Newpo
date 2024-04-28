@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model student
+
+<div class="container text-center d-grid d-flex p4 g-4">
+    <form asp-action="index" asp-controller="home" method="post">
+        <label asp-for="name">Enter Your Name</label>
+        <input asp-for="name" class="form-control" placeholder="Enter Your Name" />
+        <input asp-for="age" class="form-control" placeholder="Enter Your Age" />
+        <input asp-for="reg" class="form-control" placeholder="Enter Your Name" />
+        <select asp-for="gender" class="form-control" asp-items="Html.GetEnumSelectList<Gender>()">
+            <option value="">Select Gender</option>
+        </select>
+
+    </form>
+</div>
